@@ -1,0 +1,24 @@
+This is a review of the MS "Experimental Support for the Conservation of Energy" by Canada, D'Agostino, Katz, and Leung. Recommend minor revisions subject to below. 
+
+The rationale for using the crossbow system is never given. 
+
+1. The first (unnumbered) equation correctly includes a term for other work; thi sis the most sensible alternative hypothesis to the one the paper sets out to test, that E0 + W \neq PE.
+
+2. Materials and metods are written as one large paragraph. It would help to break it down into subsections. The methods should not be written as step by stem numbered instructions, rather they should be past tense explanation of the major details with enough detail that someone skilled could replicate the work. This includes identifying major special equipment (not done) or giving key details of measurements such as force measurements, filming for kinematics, timing, etc.
+
+3. The calculational method to use trapezoidal rule to get energy from force belongs in the methods.
+
+Results: one graph is given. nO explanation of the red fitted line which has nonzero force at zero displacement. Also authors should give +/- uncertainty on the KE estimates and efficiency and work calculations. 
+
+4. Discussion: It would be nice to know how these numbers compare to (1) other workers; (2) efficiency of other similar devices. The MS only gives percent error but does not seem to recognize that 1-%error here is the efficiency (\eta) of this machine. They should compute efficiency and compare it to things.
+
+The efficiency is only about 30ish percent. This begs explanation of where the 64-68% went. The authors identify some factors but better would be to do a quick calculation; for example, what would be the frictional force of the string rubbing on the rail in order to get this energy loss; also how much energy is present in the recoil? How much might have been lost in the strin gnot being 100% resilient?
+
+The authors claim the two primary potential sources of experimental error are calculation and human error; unclear why without considering the other factors (above) and bounding them.
+
+Return to overal significance of energy; but also how improve the design of this device?
+
+acknowledgements before bibliography.
+
+NUmbering of sections is wonky but dont worry about that that will be fixed when you provide your tex file to journal editor to format. Crossbow setup picture does not say much needs callouts. KE data to clearly check calculation?
+

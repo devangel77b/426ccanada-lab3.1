@@ -1,48 +1,66 @@
-\documentclass[twocolumn, 10pt]{article}
-\usepackage{amsmath}
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
+
+
 \usepackage{graphicx}
-\usepackage{caption}
-\usepackage{float}
-\usepackage{multicol}
-\usepackage{tikz}
-\usepackage{float}
-\usepackage[explicit]{titlesec}
-\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+% set PDF metadata
+\hypersetup{%
+pdftitle={Experimental support for the conservation of energy},
+pdfauthor={Cole Canada, Stefano D'Agostino, Jason Katz, and Ryan Leung},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{1}, 63--66 (2025)}
+\fancyhead[LO]{Canada \emph{et al.}}
+\fancyhead[LE]{Experimental support for the conservation of energy}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{1}, 63--66 (2025)}
+\fancyfoot[C]{\thepage}
+}
 
-% Title and Author section formatting like you specifically?
-\title{\textbf{Experimental Support for the Conservation of Energy}}
-\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\author{Canada, C., D’Agostino, S., Katz, J., Leung, R.}
-\date{December 3rd, 2024} % No date
 
-% Page layout
-\setlength{\textwidth}{6.5in}
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\topmargin}{-1in}
-\setlength{\textheight}{9in}
-\geometry{bottom = 0.75in, top = 0.6in}
-\setlength{\abovecaptionskip}{1ex}
-\setlength{\belowcaptionskip}{1ex}
-\setlength{\floatsep}{1ex}
-\setlength{\textfloatsep}{1ex}
+
 
 \begin{document}
-\twocolumn[
-\begin{@twocolumnfalse}
-    \maketitle
-    \centering
-    \begin{abstract}
-		The purpose of this experiment is to investigate the transfer of potential and kinetic energy and confirm the conservation of energy. To investigate, we fired a dart at varying distances using a crossbow. The crossbow launches the dart by releasing an elastic band that pushes the dart along the flight groove of the crossbow, with the dart continuing to move through the air in the direction of the groove. For each distance, at least three trials were conducted. The kinetic energy of the dart was found for each of the distances. The potential energy of the crossbow’s elastic band was also found by measuring various displacements due to various amounts of force applied. The potential and kinetic energy found were then compared. We found that the kinetic energy found was lower than the potential energy found, though this can be attributed to other forces acting on the crossbow and dart, such as friction.
+\setcounter{page}{63}
+\title{Experimental support for the conservation of energy}
+
+\author{Cole Canada}
+\email{Contact author: 226ccanada@frhsd.com}
+\author{Stefano D'Agostino}
+\author{Jason Katz}
+\author{Ryan Leung}
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+\begin{abstract}
+The purpose of this experiment is to investigate the transfer of potential and kinetic energy and confirm the conservation of energy. To investigate, we fired a dart at varying distances using a crossbow. The crossbow launches the dart by releasing an elastic band that pushes the dart along the flight groove of the crossbow, with the dart continuing to move through the air in the direction of the groove. For each distance, at least three trials were conducted. The kinetic energy of the dart was found for each of the distances. The potential energy of the crossbow’s elastic band was also found by measuring various displacements due to various amounts of force applied. The potential and kinetic energy found were then compared. We found that the kinetic energy found was lower than the potential energy found, though this can be attributed to other forces acting on the crossbow and dart, such as friction.
+\end{abstract}
+
+\keywords{keywords here}
+
+\maketitle\thispagestyle{mytitlepage}
 
 
-     \end{abstract}
-    \vspace{0.5cm}
-\end{@twocolumnfalse}
-]
-\section*{INTRODUCTION}
-\hspace{\parindent}	Since the idea was first mathematically developed in the 17th century, energy has proved to be one of the most powerful abstractions in modern physics. Definable as the potential to do work, energy takes many intuitive forms, with the two primary classes being potential and kinetic energy. Potential energy (denoted $U$) is the stored energy of an object due to its position, and is considered by convention to be the opposite of the work done by the conservative forces of a system while an object within it changes position. Work, here, refers to the definite integral (on a displacement interval) of the external force on a system with the differential displacement vector tangent to the system’s trajectory: $W=\int_{x_1}^{x_2} \vec{F}\cdot d\vec{x}$. Kinetic energy is the “active” energy of an object due to its motion, depending on the mass and velocity of the object: $K=\frac{1}{2}mv^2$. Taken together, the two are a system’s mechanical energy, although thermal energy, radiative energy, chemical energy, and many other energy forms contribute to a system’s total energy (the system in question is an arbitrary choice of objects). The conservation of energy then states that the change in the total energy of the system between two arbitrary moments in time is the net energy transferral in and out of the system (see Tipler and Mosca for a more thorough discussion). This transferral can occur through conduction, convection, and radiation, but as their contributions are taken to be negligible within this paper’s system of interest, the change in energy will be taken as solely the net external work:
-\vspace{-5pt}
+
+
+
+\section{Introduction}
+Since the idea was first mathematically developed in the 17th century, energy has proved to be one of the most powerful abstractions in modern physics. Definable as the potential to do work, energy takes many intuitive forms, with the two primary classes being potential and kinetic energy. Potential energy (denoted $U$) is the stored energy of an object due to its position, and is considered by convention to be the opposite of the work done by the conservative forces of a system while an object within it changes position. Work, here, refers to the definite integral (on a displacement interval) of the external force on a system with the differential displacement vector tangent to the system’s trajectory: $W=\int_{x_1}^{x_2} \vec{F}\cdot d\vec{x}$. Kinetic energy is the “active” energy of an object due to its motion, depending on the mass and velocity of the object: $K=\frac{1}{2}mv^2$. Taken together, the two are a system’s mechanical energy, although thermal energy, radiative energy, chemical energy, and many other energy forms contribute to a system’s total energy (the system in question is an arbitrary choice of objects). The conservation of energy then states that the change in the total energy of the system between two arbitrary moments in time is the net energy transferral in and out of the system (see Tipler and Mosca for a more thorough discussion). This transferral can occur through conduction, convection, and radiation, but as their contributions are taken to be negligible within this paper’s system of interest, the change in energy will be taken as solely the net external work:
 \begin{gather*}
     \\ E_0 + W = E_F, \text{where}
     \\ E = \sum K + \sum U + \sum U_{thermal} + \sum E_{other}
@@ -53,43 +71,50 @@ The null hypothesis tested in the experiment discussed in this paper is that $E_
 
 
 
-
- \section*{MATERIALS/METHODS}
- \begin{figure}[h]
-    \centering
-    \textbf{Fig. 1: Crossbow Setup to Find Potential Energy}
-    \includegraphics[width=\columnwidth]{IMG_1235.jpg}
+\section{Materials and methods}
+\begin{figure}
+\begin{center}
+%\includegraphics[width=\columnwidth]{IMG_1235.jpg}
+\end{center}
+\caption{\label{fig:1} Crossbow Setup to Find Potential Energy}
 \end{figure}
-\hspace{\parindent}To measure the potential energy stored in the string of a handmade wooden toy bow by Adventure Awaits!, the yardstick and the unloaded bow were securely clamped to a level surface, perpendicular to one another as shown in Fig. 1. Starting at the 0.16 m mark, which is the distance from the bow's shaft to the string (and thus its equilibrium position), the bowstring was pulled back to various positions. The force required to pull back the string was measured in Newtons using blue 20N spring scales. Two individuals confirmed both the distance the string was pulled and the force required, cross-checking their measurements to ensure accuracy. Forces were measured at even increments (2 N, 4 N, ..., 20 N) due to the limited precision of the spring scale, with corresponding string stretching distances measured as a result. 
+To measure the potential energy stored in the string of a handmade wooden toy bow by Adventure Awaits!, the yardstick and the unloaded bow were securely clamped to a level surface, perpendicular to one another as shown in Fig. 1. Starting at the 0.16 m mark, which is the distance from the bow's shaft to the string (and thus its equilibrium position), the bowstring was pulled back to various positions. The force required to pull back the string was measured in Newtons using blue 20N spring scales. Two individuals confirmed both the distance the string was pulled and the force required, cross-checking their measurements to ensure accuracy. Forces were measured at even increments (2 N, 4 N, ..., 20 N) due to the limited precision of the spring scale, with corresponding string stretching distances measured as a result. 
+
 Secondly, to measure the kinetic energy of the foam projectile (i.e., suction dart) propelled by the bow, the bow and yardsticks were set up parallel to one another and positioned securely, ensuring alignment with the testing area. The setup was placed away from the target wall, both vertically and horizontally, with precise measurements taken to establish a shooting distance. Starting at a distance of 2 meters horizontally and 1 meter vertically, the dart was launched toward the wall in three trials, each recorded in slow motion at about 120 frames per second for detailed analysis. This process was then repeated at a horizontal firing distance of 1 meter for four additional trials. Using the slow-motion footage, the initial velocity of the dart was determined by dividing the distance traveled by a given point on the dart (in particular, its backmost end) by the time interval from the moment that point leaves the crossbow to the moment that point stops traveling (i.e., when the dart hits the wall). Since horizontal velocity is independent of vertical influences (i.e., gravity), and the above measurements are taken after the dart has lost contact with the crossbow, this velocity should be almost exactly its initial velocity. Firing distances relatively close to the wall were chosen to minimize the angle at which the dart hits the wall with the horizontal; at greater distances, the dart would begin to measurably point downwards, causing the dart’s extremities to be measured as having travelled farther when in reality its center of mass still has its constant initial velocity. In the calculations, these measurements, combined with the average mass of the darts, were used to calculate their kinetic energy.
 
- \begin{figure}
-    \centering
-    \textbf{Fig. 2: Foam Dart Free Body Diagram}
-    \includegraphics[width=\columnwidth]{FBDDart.jpg}
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FBDDart.jpg}
+\end{center}
+\caption{\label{fig:2} Foam Dart Free Body Diagram}
 \end{figure}
 
- \begin{figure}[h]
-    \centering
-    \textbf{Fig. 3: Crossbow Free Body Diagram}
-    \includegraphics[width=\columnwidth]{BowFBD(v.2).png}
+\begin{figure}
+\begin{center}
+%\includegraphics[width=\columnwidth]{BowFBD(v.2).png}
+\end{center}
+\caption{\label{fig:3} Crossbow Free Body Diagram}
 \end{figure}
 
-\section*{RESULTS}
-\begin{figure} [h]
-    \centering
-    \textbf{Fig. 4: Displacement vs. Force of the crossbow string}
-    \includegraphics[width=\columnwidth]{Displacementvsforce.png}
+
+
+
+
+
+\section{Results}
+\begin{figure}
+\begin{center}
+%\includegraphics[width=\columnwidth]{Displacementvsforce.png}
+\end{center}
+\caption{\label{fig:4} Displacement vs. Force of the crossbow string}
 \end{figure}
 The potential energy of the dart-crossbow system when the bow has been drawn with dart loaded is, by the conservation of energy, the work that is required to transform the system to that state from a state of zero energy (i.e. where everything is stationary and the bow is at equilibrium; the dart’s initial height is chosen as the point of zero gravitational potential, for simplicity). Work is the integral on the interval of displacement of the dot product of the force (vector) doing said work with the (differential) displacement vector. For discrete data, this corresponds to finding the approximate area beneath the curve of the function $\vec{F}(\Delta x)$ that the data belongs to. Taking a trapezoidal Riemann sum of the data from $\Delta x=0\text{m}$ to $\Delta x=0.1\text{m}$ (where $\Delta x$ denotes the displacement of the bow from equilibrium) gives a reasonable approximation of the work done to draw the crossbow, and therefore a reasonable approximation of the crossbow’s potential energy:
-\vspace{-10pt}
 \begin{gather*}
 	\\U_s=-W=\int_{0\text{m}}^{10\text{m}} \vec{F} \cdot d\vec{x} \approx
 \\ \frac{1}{2}\sum_{n=0}^{9} [F(x_n)+F(x_{n+1})]\Delta x_n = 0.512 \text{J}
 \end{gather*}
 
 To find the kinetic energy of the dart due to the potential energy of the crossbow (or equivalently, the work done by the crossbow on the dart as it is fired), the dart’s mass and velocity just as it leaves the crossbow must be determined. By taking the average of 19 measurements from a high-precision scale, the mass of the dart in the experiment was about 0.00086 kg. Of the seven trials (three at 2m firing distance and four at 1m), the calculated velocities were 21 m/s for five, 18.6 m/s for one, and 19.4 m/s for one. However (as found during calculations), a time interval uncertainty of $\pm$0.01s results in a velocity uncertainty of up to $\pm$3.1 m/s―$\pm$4.65 m/s. The average of the highest and lowest measured velocities (23.25 m/s and 15.5 m/s, respectively) is about 19.4 m/s, while the average of all measured velocities from all trials (ignoring the uncertainty in each value) is about 20.4 m/s. The kinetic energies due to each are:
-\vspace{-10pt}
 \begin{gather*}
 	\\K = \frac{1}{2}mv_0^2
 	\\ K_{extrema} = \frac{1}{2}(0.00086\text{kg})(19.4\text{m/s})^2=0.16\text{J}
@@ -104,23 +129,36 @@ The percent errors(\% Error) of these with respect to the initial potential ener
 \end{gather*}
 The extreme discrepancy between the measured initial kinetic energy of the dart and the measured initial potential energy of the bow suggests that the experiment’s results are inconclusive at best, or that they refute the hypothesis at worst.
 
-\section{DISCUSSION}
-%\vspace{-13pt}  % Adjust the space between the header and the text
+
+
+
+
+
+
+\section{Discussion}
 A comparison of the initial potential energy of the dart-crossbow system and the initial kinetic energy of the dart shows a disparity above 60\%, well beyond that solely originating from experimental error (for the purposes of this experiment, about 10\% difference). These extreme differences, by themselves, would suggest that the experiment’s results are inconclusive at best or that they refute the hypothesis at worst. These results do not, however, disagree with the conservation of energy. The energy equivalence statement for the above experiment is $U_{string} + U_{gravity} = K_{dart} + K_{string} + \Delta U_{thermal}$. This is partially due to the existence of other energy forms after the dart has been launched, including the bow’s own kinetic energy (as the bow certainly has mass and a velocity at launch) and the thermal energy due to friction between the dart and the crossbow during launch. The experimental setup likely had several other resistive forces, such as between the string and the bow or air resistance acting on the projectiles. Measuring these quantities would be necessary to determine whether the above results support or refute the conservation of energy.
 
-\hspace{\parindent}There were two primary potential sources of experimental error, the first being due to calculation methodology and the second being due to human error. Another potential source of error is the human error associated with our measurements. Instead of relying on manual calculations, a more accurate method could have been using a motion sensor to directly measure the speed of the projectiles and better determine the kinetic energy. Furthermore, using more precise equipment for measuring the force applied to the string could have improved the accuracy of the potential energy calculations.
+There were two primary potential sources of experimental error, the first being due to calculation methodology and the second being due to human error. Another potential source of error is the human error associated with our measurements. Instead of relying on manual calculations, a more accurate method could have been using a motion sensor to directly measure the speed of the projectiles and better determine the kinetic energy. Furthermore, using more precise equipment for measuring the force applied to the string could have improved the accuracy of the potential energy calculations.
+
 Despite these errors, our findings do not necessarily violate the laws of energy conservation, leaving open the possibility of conducting further research in this area.
 
 Energy-analysis is advantageous since energy is a scalar, unlike vectors, whose components depend on coordinate orientation. If force, mass, and velocity can be show to give rise to a conserved quantity like mechanical energy, this can then provide valuable insight into the behavior of numerous systems, from simple projectiles to complex engines, by offering a vastly more straightforward method of finding the system's dynamical laws.
-\vspace{-12pt}
-\section*{Resources/Bibliography}
-[1] P.A. Tipler, and G. Mosca, Physics for Scientists and Engineers (Macmillan Higher Education, 2007).
 
 
 
-\section*{ACKNOWLEDGMENTS} 
-Thank you to C. Canada, S. D’Agostino, J. Katz, and R. Leung for working on the lab and writing the report.
 
-Thank you to the chief editor of the Journal of Science and Engineering, Dr. Evangelista, for his continued support.
 
+
+\section{Acknowledgements}
+We thank several anonymous reviewers for helpful comments. CC, SD, JK, and RL planned the experiments, collected data, analyzed the results, and prepared the manuscript.
+%Thank you to C. Canada, S. D’Agostino, J. Katz, and R. Leung for working on the lab and writing the report.
+%
+%Thank you to the chief editor of the Journal of Science and Engineering, Dr. Evangelista, for his continued support.
+
+
+
+
+%\section*{Resources/Bibliography}
+%[1] P.A. Tipler, and G. Mosca, Physics for Scientists and Engineers (Macmillan Higher Education, 2007).
+\bibliography{canada.bib}
 \end{document}
